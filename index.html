@@ -4,288 +4,260 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Expediente Porky 2026</title>
-<meta name="description" content="Recopilación ciudadana de denuncias, investigaciones e irregularidades documentadas públicamente.">
+<meta name="description" content="Compilación de enlaces a reportes periodísticos públicamente disponibles. Plataforma ciudadana de acceso a información.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400;500&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#faf9f6;--surface:#fff;--text:#111;--text2:#444;--text3:#777;--border:#e0ddd6;--border2:#d0cdc6;--alta:#b91c1c;--alta-bg:#fef2f2;--alta-border:#fca5a5;--media:#b45309;--media-bg:#fffbeb;--media-border:#fcd34d;--baja:#4d7c0f;--baja-bg:#f7fee7;--baja-border:#bef264;--accent:#991b1b;--serif:'Instrument Serif',Georgia,serif;--sans:'Be Vietnam Pro',system-ui,sans-serif;--mono:'Geist Mono',monospace}
+:root{--bg:#faf9f6;--surface:#fff;--text:#111;--text2:#444;--text3:#777;--border:#e0ddd6;--border2:#ccc8be;--accent:#7c2d12;--serif:'Instrument Serif',Georgia,serif;--sans:'Be Vietnam Pro',system-ui,sans-serif;--mono:'Geist Mono',monospace;
+--c-inv:#7e22ce;--c-tri:#047857;--c-ele:#1d4ed8;--c-ges:#475569;--c-ant:#78716c;--c-inc:#b45309}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
 
-/* TOPBAR */
-.topbar{background:#1a1a1a;position:sticky;top:0;z-index:100;display:flex;flex-wrap:wrap}
-.topbar-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:10px 16px;border:none;background:none;color:#ccc;font-family:var(--mono);font-size:0.7rem;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;transition:background .2s;border-right:1px solid #333;min-width:0}
+.topbar{background:#1a1a1a;position:sticky;top:0;z-index:100;display:flex}
+.topbar-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:11px 16px;border:none;background:none;color:#ccc;font-family:var(--mono);font-size:0.7rem;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .2s;border-right:1px solid #333}
 .topbar-btn:last-child{border-right:none}
 .topbar-btn:hover{background:#2a2a2a}
 .topbar-btn svg{width:14px;height:14px;flex-shrink:0}
-.topbar-btn .chevron{transition:transform .3s}
-.topbar-btn[aria-expanded="true"] .chevron{transform:rotate(180deg)}
+.chev{transition:transform .3s}
+.topbar-btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
 .panel{max-height:0;overflow:hidden;transition:max-height .5s ease;background:#222;width:100%}
-.panel.open{max-height:2000px}
-.panel-inner{padding:16px 20px 20px;max-width:800px;margin:0 auto;color:#bbb;font-size:0.82rem;line-height:1.7}
-.panel-inner h3{color:#eee;font-family:var(--mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;margin:14px 0 6px;padding-bottom:4px;border-bottom:1px solid #444}
-.panel-inner h3:first-child{margin-top:0}
-.panel-inner .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:10px 0}
-.stat-card{background:#2a2a2a;border-radius:6px;padding:12px;text-align:center}
-.stat-card .num{font-family:var(--mono);font-size:1.5rem;font-weight:700;color:#fff}
-.stat-card .label{font-size:0.7rem;color:#888;margin-top:2px}
-.money-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:6px;margin:8px 0}
-.money-item{display:flex;justify-content:space-between;padding:6px 10px;background:#2a2a2a;border-radius:4px;font-family:var(--mono);font-size:0.75rem}
-.money-item .val{color:#f59e0b;font-weight:500}
-.panel-inner .note{font-size:0.75rem;color:#888;font-style:italic;margin-top:12px;padding-top:8px;border-top:1px solid #333}
-.disclaimer-text{color:#aaa;font-size:0.78rem;line-height:1.6;text-align:center}
+.panel.open{max-height:3000px}
+.pi{padding:20px;max-width:860px;margin:0 auto;color:#bbb;font-size:.82rem;line-height:1.7}
+.pi h3{color:#eee;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;margin:16px 0 8px;padding-bottom:4px;border-bottom:1px solid #444}
+.pi h3:first-child{margin-top:0}
+.pi .sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:10px 0}
+.pi .sc{background:#2a2a2a;border-radius:6px;padding:12px;text-align:center}
+.pi .sc .n{font-family:var(--mono);font-size:1.4rem;font-weight:700;color:#fff}
+.pi .sc .l{font-size:.7rem;color:#888;margin-top:2px}
+.pi .mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:6px;margin:8px 0}
+.pi .mi{display:flex;justify-content:space-between;padding:6px 10px;background:#2a2a2a;border-radius:4px;font-family:var(--mono);font-size:.73rem}
+.pi .mi .v{color:#f59e0b;font-weight:500}
+.pi .note{font-size:.73rem;color:#888;font-style:italic;margin-top:12px;padding-top:8px;border-top:1px solid #333}
+.disc-text{color:#aaa;font-size:.78rem;line-height:1.65;text-align:left}
+.disc-text strong{color:#ddd}
+.disc-text ul{margin:8px 0 8px 18px}
+.disc-text li{margin-bottom:4px}
 
-/* HEADER */
-header{padding:48px 20px 36px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#f5f4f0 0%,var(--bg) 100%)}
-header h1{font-family:var(--serif);font-size:clamp(2.2rem,6vw,3.6rem);font-weight:400;letter-spacing:-0.02em;line-height:1.1;color:var(--accent);margin-bottom:8px}
-header .subtitle{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:16px}
-header .desc{max-width:600px;margin:0 auto;font-size:0.88rem;color:var(--text2);line-height:1.6}
+header{padding:48px 20px 32px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#f5f3ef,var(--bg))}
+header h1{font-family:var(--serif);font-size:clamp(2.1rem,6vw,3.4rem);font-weight:400;letter-spacing:-.02em;line-height:1.1;color:var(--accent);margin-bottom:6px}
+header .sub{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+header .desc{max-width:620px;margin:0 auto;font-size:.86rem;color:var(--text2);line-height:1.6}
 
-/* CONTROLS */
-.controls{position:sticky;top:42px;z-index:50;background:rgba(250,249,246,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 16px}
-.controls-inner{max-width:960px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.search-box{flex:1 1 220px;position:relative}
-.search-box input{width:100%;padding:9px 12px 9px 36px;border:1px solid var(--border);border-radius:6px;font-family:var(--sans);font-size:0.85rem;background:var(--surface);color:var(--text);outline:none;transition:border-color .2s}
-.search-box input:focus{border-color:var(--accent)}
-.search-box svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--text3);pointer-events:none}
-.filter-group{display:flex;flex-wrap:wrap;gap:6px}
-.fbtn{padding:6px 12px;border:1px solid var(--border);border-radius:20px;background:var(--surface);font-family:var(--mono);font-size:0.67rem;letter-spacing:0.04em;text-transform:uppercase;color:var(--text2);cursor:pointer;transition:all .2s;white-space:nowrap}
-.fbtn:hover{border-color:var(--text3)}
-.fbtn.active{background:var(--text);color:var(--surface);border-color:var(--text)}
-.fbtn.s-alta.active{background:var(--alta);border-color:var(--alta);color:#fff}
-.fbtn.s-media.active{background:var(--media);border-color:var(--media);color:#fff}
-.fbtn.s-baja.active{background:var(--baja);border-color:var(--baja);color:#fff}
-.sort-btn{padding:6px 12px;border:1px solid var(--border);border-radius:6px;background:var(--surface);font-family:var(--mono);font-size:0.67rem;letter-spacing:0.04em;color:var(--text2);cursor:pointer;display:flex;align-items:center;gap:4px;transition:all .2s;margin-left:auto}
-.sort-btn:hover{border-color:var(--text3)}
+.controls{position:sticky;top:43px;z-index:50;background:rgba(250,249,246,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 16px}
+.ci{max-width:960px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.sb{flex:1 1 220px;position:relative}
+.sb input{width:100%;padding:9px 12px 9px 36px;border:1px solid var(--border);border-radius:6px;font-family:var(--sans);font-size:.85rem;background:var(--surface);color:var(--text);outline:none;transition:border-color .2s}
+.sb input:focus{border-color:var(--accent)}
+.sb svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--text3);pointer-events:none}
+.fg{display:flex;flex-wrap:wrap;gap:5px}
+.fb{padding:6px 11px;border:1px solid var(--border);border-radius:20px;background:var(--surface);font-family:var(--mono);font-size:.65rem;letter-spacing:.04em;text-transform:uppercase;color:var(--text2);cursor:pointer;transition:all .15s;white-space:nowrap}
+.fb:hover{border-color:var(--text3)}
+.fb.on{color:#fff}
 
-/* RESULTS */
-.results-info{max-width:960px;margin:16px auto 4px;padding:0 16px;font-family:var(--mono);font-size:0.72rem;color:var(--text3);letter-spacing:0.03em}
+.ri{max-width:960px;margin:14px auto 4px;padding:0 16px;font-family:var(--mono);font-size:.7rem;color:var(--text3);letter-spacing:.03em}
 
-/* CARDS */
-.cards{max-width:960px;margin:0 auto;padding:8px 16px 60px}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;margin-bottom:10px;overflow:hidden;transition:box-shadow .2s,border-color .2s}
-.card:hover{box-shadow:0 2px 12px rgba(0,0,0,0.06);border-color:var(--border2)}
-.card-header{padding:14px 16px;cursor:pointer;display:flex;gap:12px;align-items:flex-start;user-select:none}
-.sev-bar{flex-shrink:0;width:4px;border-radius:2px;min-height:44px;align-self:stretch}
-.sev-alta .sev-bar{background:var(--alta)}.sev-media .sev-bar{background:var(--media)}.sev-baja .sev-bar{background:var(--baja)}
-.card-main{flex:1;min-width:0}
-.card-top{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:4px}
-.badge-sev{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.06em;text-transform:uppercase;padding:2px 7px;border-radius:3px;font-weight:500}
-.sev-alta .badge-sev{background:var(--alta-bg);color:var(--alta);border:1px solid var(--alta-border)}
-.sev-media .badge-sev{background:var(--media-bg);color:var(--media);border:1px solid var(--media-border)}
-.sev-baja .badge-sev{background:var(--baja-bg);color:var(--baja);border:1px solid var(--baja-border)}
-.badge-cat{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.04em;padding:2px 7px;border-radius:3px;border:1px solid var(--border);color:var(--text3)}
-.badge-date{font-family:var(--mono);font-size:0.63rem;color:var(--text3);margin-left:auto;white-space:nowrap}
-.card-title{font-size:0.95rem;font-weight:600;line-height:1.35;color:var(--text);margin-bottom:2px}
-.card-tipo{font-size:0.78rem;color:var(--text2)}
-.card-estado{font-size:0.74rem;color:var(--text3);margin-top:3px;font-style:italic}
-.card-chevron{flex-shrink:0;width:20px;height:20px;color:var(--text3);transition:transform .3s;align-self:center}
-.card.open .card-chevron{transform:rotate(180deg)}
-.card-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.card.open .card-body{max-height:3000px}
-.card-body-inner{padding:0 16px 16px 32px;border-top:1px solid var(--border)}
-.detail-section{margin-top:12px}
-.detail-label{font-family:var(--mono);font-size:0.63rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
-.detail-text{font-size:0.84rem;color:var(--text2);line-height:1.65}
-.detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px}
-.detail-item .val{font-size:0.84rem;color:var(--text);font-weight:500}
-.sources{margin-top:14px}
-.source-link{display:inline-flex;align-items:center;gap:4px;padding:5px 10px;margin:3px 4px 3px 0;border:1px solid var(--border);border-radius:5px;font-size:0.78rem;color:var(--accent);text-decoration:none;background:var(--bg);transition:all .2s;line-height:1.3}
-.source-link:hover{background:var(--alta-bg);border-color:var(--alta-border)}
-.source-link svg{width:12px;height:12px;flex-shrink:0}
+.section-head{max-width:960px;margin:24px auto 8px;padding:0 16px}
+.section-head h2{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);padding-bottom:6px;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:8px}
+.section-head h2 .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 
-/* FOOTER */
+.cards{max-width:960px;margin:0 auto;padding:0 16px 8px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;margin-bottom:8px;overflow:hidden;transition:box-shadow .2s,border-color .2s}
+.card:hover{box-shadow:0 2px 12px rgba(0,0,0,.05);border-color:var(--border2)}
+.ch{padding:14px 16px;cursor:pointer;display:flex;gap:10px;align-items:flex-start;user-select:none}
+.cbar{flex-shrink:0;width:4px;border-radius:2px;min-height:40px;align-self:stretch}
+.cm{flex:1;min-width:0}
+.ct{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:3px}
+.badge{font-family:var(--mono);font-size:.6rem;letter-spacing:.05em;padding:2px 7px;border-radius:3px;border:1px solid}
+.bd{font-family:var(--mono);font-size:.62rem;color:var(--text3);margin-left:auto;white-space:nowrap}
+.titulo{font-size:.93rem;font-weight:600;line-height:1.35;color:var(--text);margin-bottom:2px}
+.tipod{font-size:.77rem;color:var(--text2)}
+.est{font-size:.73rem;color:var(--text3);margin-top:2px;font-style:italic}
+.cchev{flex-shrink:0;width:20px;height:20px;color:var(--text3);transition:transform .3s;align-self:center}
+.card.open .cchev{transform:rotate(180deg)}
+.cb{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.card.open .cb{max-height:4000px}
+.cbi{padding:0 16px 16px 30px;border-top:1px solid var(--border)}
+.ds{margin-top:12px}
+.dl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
+.dt{font-size:.83rem;color:var(--text2);line-height:1.65}
+.dg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px}
+.di .v{font-size:.83rem;color:var(--text);font-weight:500}
+.sl{display:inline-flex;align-items:center;gap:4px;padding:5px 10px;margin:3px 4px 3px 0;border:1px solid var(--border);border-radius:5px;font-size:.77rem;color:var(--accent);text-decoration:none;background:var(--bg);transition:all .2s;line-height:1.3}
+.sl:hover{background:#fef2f2;border-color:#fca5a5}
+.sl svg{width:12px;height:12px;flex-shrink:0}
+
 footer{border-top:1px solid var(--border);padding:32px 20px;text-align:center;background:#f0eeea}
-footer .disclaimer{max-width:640px;margin:0 auto 16px;font-size:0.8rem;color:var(--text2);line-height:1.65}
-footer .meta{font-family:var(--mono);font-size:0.65rem;color:var(--text3);letter-spacing:0.04em}
+footer .fd{max-width:660px;margin:0 auto 12px;font-size:.79rem;color:var(--text2);line-height:1.65}
+footer .fm{font-family:var(--mono);font-size:.63rem;color:var(--text3);letter-spacing:.04em}
 
 .empty{text-align:center;padding:60px 20px;color:var(--text3)}
-.scroll-top{position:fixed;bottom:20px;right:20px;width:40px;height:40px;border-radius:50%;background:var(--text);color:var(--surface);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(10px);transition:all .3s;z-index:60;box-shadow:0 2px 8px rgba(0,0,0,0.2)}
-.scroll-top.visible{opacity:1;transform:translateY(0)}
-.scroll-top svg{width:18px;height:18px}
+.stt{position:fixed;bottom:20px;right:20px;width:40px;height:40px;border-radius:50%;background:var(--text);color:var(--surface);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(10px);transition:all .3s;z-index:60;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.stt.vis{opacity:1;transform:translateY(0)}
+.stt svg{width:18px;height:18px}
 
 @media(max-width:640px){
-  header{padding:32px 16px 24px}
-  .controls{top:42px;padding:10px 12px}
-  .search-box{flex:1 1 100%}
-  .filter-group{gap:4px}
-  .fbtn{padding:5px 9px;font-size:0.62rem}
-  .sort-btn{margin-left:0;font-size:0.62rem}
-  .card-header{padding:12px;gap:8px}
-  .card-title{font-size:0.88rem}
-  .card-body-inner{padding:0 12px 14px 20px}
-  .detail-grid{grid-template-columns:1fr}
-  .badge-date{margin-left:0;display:block;width:100%;margin-top:2px}
-  .results-info{padding:0 12px}
-  .cards{padding:8px 12px 60px}
-  .topbar{flex-direction:column}
-  .topbar-btn{border-right:none;border-bottom:1px solid #333}
-  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  header{padding:28px 16px 22px}
+  .controls{top:43px;padding:10px 12px}
+  .sb{flex:1 1 100%}
+  .fg{gap:4px}.fb{padding:5px 8px;font-size:.6rem}
+  .ch{padding:12px;gap:8px}.titulo{font-size:.86rem}
+  .cbi{padding:0 12px 14px 18px}.dg{grid-template-columns:1fr}
+  .bd{margin-left:0;display:block;width:100%;margin-top:2px}
+  .ri,.cards,.section-head{padding-left:12px;padding-right:12px}
+  .topbar{flex-direction:column}.topbar-btn{border-right:none;border-bottom:1px solid #333}
+  .pi .sg{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
 <body>
 
 <div class="topbar">
-  <button class="topbar-btn" aria-expanded="false" onclick="togglePanel('imp',this)">
+  <button class="topbar-btn" aria-expanded="false" onclick="tp('imp',this)">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
     Importante
-    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
   </button>
-  <button class="topbar-btn" aria-expanded="false" onclick="togglePanel('info',this)">
+  <button class="topbar-btn" aria-expanded="false" onclick="tp('info',this)">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="12" y2="17"/></svg>
     Información General
-    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
   </button>
 </div>
 
-<div class="panel" id="panel-imp">
-  <div class="panel-inner">
-    <p class="disclaimer-text">Esta plataforma solo se encarga de recoger información actualmente publicada en internet sobre el tema, no está confirmando ni afirmando nada sobre el señor en cuestión. Es una plataforma ciudadana diseñada para simplificar la búsqueda de información. Cualquier reclamo dirigirlo a las fuentes de las noticias.<br><br>Todas las investigaciones aquí recopiladas se encuentran en etapas previas al juicio oral; ninguna ha concluido con sentencia condenatoria firme. La persona en cuestión mantiene la presunción de inocencia reconocida por el ordenamiento jurídico peruano.</p>
+<div class="panel" id="p-imp">
+  <div class="pi">
+    <div class="disc-text">
+      <strong>Aviso legal y condiciones de uso</strong>
+      <ul>
+        <li>Esta plataforma <strong>solo compila y enlaza información actualmente publicada en medios periodísticos e instituciones públicas</strong> disponibles en internet. No realiza investigación propia, no genera contenido original y no emite opinión, juicio de valor ni conclusión alguna sobre las personas mencionadas.</li>
+        <li>La plataforma <strong>no afirma, confirma ni da por cierto</strong> ninguno de los hechos descritos en las fuentes enlazadas. Cada entrada consiste en un resumen atributivo que identifica expresamente la fuente periodística o institucional de la que proviene la información, utilizando fórmulas como «según [fuente]» o «de acuerdo con [medio]».</li>
+        <li>Todas las investigaciones, denuncias y procesos aquí referenciados se encuentran, según las fuentes consultadas, en etapas previas al juicio oral. <strong>Ninguno ha concluido con sentencia condenatoria firme.</strong> La persona mencionada mantiene la presunción de inocencia reconocida por la Constitución Política del Perú y los tratados internacionales de derechos humanos.</li>
+        <li>Esta es una <strong>plataforma ciudadana sin fines de lucro</strong>, diseñada exclusivamente para simplificar el acceso a información pública dispersa en múltiples fuentes periodísticas, en ejercicio del derecho a la libertad de expresión e información consagrado en el artículo 2, incisos 4 y 5 de la Constitución Política del Perú.</li>
+        <li><strong>Cualquier reclamo, rectificación o ejercicio del derecho de réplica debe dirigirse a las fuentes originales de las noticias</strong>, cuyos enlaces se proporcionan en cada entrada. Esta plataforma no es autora ni editora del contenido enlazado.</li>
+        <li>Si alguna fuente enlazada fuera retirada, corregida o rectificada por su autor original, esta plataforma procederá a actualizar o eliminar la referencia correspondiente.</li>
+      </ul>
+    </div>
   </div>
 </div>
 
-<div class="panel" id="panel-info">
-  <div class="panel-inner" id="infoPanel"></div>
-</div>
+<div class="panel" id="p-info"><div class="pi" id="infoP"></div></div>
 
 <header>
-  <div class="subtitle">archivo ciudadano · elecciones 2026</div>
+  <div class="sub">compilación de prensa · elecciones 2026</div>
   <h1>Expediente Porky 2026</h1>
-  <p class="desc">Recopilación verificada de denuncias, investigaciones, irregularidades e inconductas documentadas públicamente sobre Rafael López Aliaga, candidato presidencial por Renovación Popular.</p>
+  <p class="desc">Compilación de reportes periodísticos e institucionales públicamente disponibles sobre investigaciones, denuncias, irregularidades e inconductas atribuidas a Rafael López Aliaga, candidato presidencial por Renovación Popular.</p>
 </header>
 
 <div class="controls">
-  <div class="controls-inner">
-    <div class="search-box">
+  <div class="ci">
+    <div class="sb">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" id="searchInput" placeholder="Buscar caso, persona, entidad, monto...">
+      <input type="text" id="si" placeholder="Buscar por caso, persona, entidad, monto...">
     </div>
-    <div class="filter-group" id="sevFilters">
-      <button class="fbtn s-alta" data-sev="alta" onclick="toggleFilter(this,'sev')">🔴 Alta</button>
-      <button class="fbtn s-media" data-sev="media" onclick="toggleFilter(this,'sev')">🟠 Media</button>
-      <button class="fbtn s-baja" data-sev="baja" onclick="toggleFilter(this,'sev')">🟢 Baja</button>
-    </div>
-    <div class="filter-group" id="catFilters"></div>
-    <button class="sort-btn" id="sortBtn" onclick="toggleSort()">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="sortIcon"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-      <span id="sortLabel">Más recientes</span>
-    </button>
+    <div class="fg" id="filters"></div>
   </div>
 </div>
 
-<div class="results-info" id="resultsInfo"></div>
-<div class="cards" id="cardsContainer"></div>
+<div class="ri" id="ri"></div>
+<div id="content"></div>
 
 <footer>
-  <p class="disclaimer">Esta plataforma solo se encarga de recoger información actualmente publicada en internet sobre el tema, no está confirmando ni afirmando nada sobre el señor en cuestión. Es una plataforma ciudadana diseñada para simplificar la búsqueda de información. Cualquier reclamo dirigirlo a las fuentes de las noticias.</p>
-  <p class="meta">Expediente Porky 2026 · Última actualización: marzo 2026 · Solo casos con fuentes verificadas enlazadas</p>
+  <p class="fd">Esta plataforma solo se encarga de recoger información actualmente publicada en internet sobre el tema, no está confirmando ni afirmando nada sobre el señor en cuestión. Es una plataforma ciudadana diseñada para simplificar la búsqueda de información. Cualquier reclamo dirigirlo a las fuentes de las noticias.</p>
+  <p class="fm">Expediente Porky 2026 · Compilación de prensa · Solo casos con fuentes verificadas enlazadas · Última actualización: marzo 2026</p>
 </footer>
 
-<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<button class="stt" id="stt" onclick="window.scrollTo({top:0,behavior:'smooth'})">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
 <script>
-let DATA=[], sortAsc=false, activeSev=new Set(), activeCats=new Set();
-const CATS={
-  'Investigación penal':{l:'Penal',c:'#7e22ce'},
-  'Irregularidad tributaria':{l:'Tributario',c:'#047857'},
-  'Irregularidad electoral':{l:'Electoral',c:'#1d4ed8'},
-  'Infracción electoral':{l:'Electoral',c:'#1d4ed8'},
-  'Gestión municipal':{l:'Gestión',c:'#475569'},
-  'Antecedente empresarial':{l:'Antecedente',c:'#64748b'},
-  'Amenaza a periodista':{l:'Prensa',c:'#b91c1c'},
-  'Declaración racista':{l:'Racismo',c:'#a16207'},
-  'Inconducta':{l:'Inconducta',c:'#92400e'}
+let D=[],af=new Set();
+const S={
+  investigacion:{label:'Investigaciones penales y anticorrupción',short:'Penales',color:'var(--c-inv)',dot:'#7e22ce',order:1},
+  tributario:{label:'Irregularidades tributarias',short:'Tributario',color:'var(--c-tri)',dot:'#047857',order:2},
+  electoral:{label:'Irregularidades y sanciones electorales',short:'Electoral',color:'var(--c-ele)',dot:'#1d4ed8',order:3},
+  gestion:{label:'Gestión municipal',short:'Gestión',color:'var(--c-ges)',dot:'#475569',order:4},
+  antecedente:{label:'Antecedentes empresariales y vínculos documentados',short:'Antecedentes',color:'var(--c-ant)',dot:'#78716c',order:5},
+  inconducta:{label:'Inconductas y declaraciones polémicas reportadas por prensa',short:'Inconductas',color:'var(--c-inc)',dot:'#b45309',order:6}
 };
-const getCat=c=>(CATS[c]||{l:c,c:'#666'}).l;
-const extIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
+const EI='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
 
-function togglePanel(id,btn){
-  const p=document.getElementById('panel-'+id);
-  const open=p.classList.toggle('open');
-  btn.setAttribute('aria-expanded',open);
-  // close others
-  document.querySelectorAll('.panel').forEach(el=>{if(el.id!=='panel-'+id)el.classList.remove('open')});
+function tp(id,btn){
+  const p=document.getElementById('p-'+id),o=p.classList.toggle('open');
+  btn.setAttribute('aria-expanded',o);
+  document.querySelectorAll('.panel').forEach(el=>{if(el.id!=='p-'+id)el.classList.remove('open')});
   document.querySelectorAll('.topbar-btn').forEach(b=>{if(b!==btn)b.setAttribute('aria-expanded','false')});
 }
 
 async function init(){
-  try{const r=await fetch('data.json');DATA=await r.json()}catch(e){document.getElementById('cardsContainer').innerHTML='<div class="empty"><p>Error cargando data.json</p></div>';return}
-  buildCatFilters();buildInfoPanel();render();
-  document.getElementById('searchInput').addEventListener('input',render);
-  window.addEventListener('scroll',()=>document.getElementById('scrollTop').classList.toggle('visible',window.scrollY>600));
+  try{const r=await fetch('data.json');D=await r.json()}catch(e){document.getElementById('content').innerHTML='<div class="empty"><p>Error cargando data.json</p></div>';return}
+  buildFilters();buildInfo();render();
+  document.getElementById('si').addEventListener('input',render);
+  window.addEventListener('scroll',()=>document.getElementById('stt').classList.toggle('vis',window.scrollY>600));
 }
 
-function buildCatFilters(){
-  const gs=[...new Set(DATA.map(d=>getCat(d.categoria)))];
-  const c=document.getElementById('catFilters');
-  gs.forEach(g=>{const b=document.createElement('button');b.className='fbtn';b.dataset.cat=g;b.textContent=g;b.onclick=()=>toggleFilter(b,'cat');c.appendChild(b)});
+function buildFilters(){
+  const c=document.getElementById('filters');
+  const secs=[...new Set(D.map(d=>d.seccion))].sort((a,b)=>(S[a]?.order||99)-(S[b]?.order||99));
+  secs.forEach(s=>{
+    const b=document.createElement('button');
+    b.className='fb';b.dataset.sec=s;b.textContent=S[s]?.short||s;
+    b.onclick=()=>{if(af.has(s)){af.delete(s);b.classList.remove('on');b.style.cssText=''}else{af.add(s);b.classList.add('on');b.style.cssText=`background:${S[s]?.dot};border-color:${S[s]?.dot};color:#fff`}render()};
+    c.appendChild(b);
+  });
 }
 
-function buildInfoPanel(){
-  const t=DATA.length, alta=DATA.filter(d=>d.gravedad==='alta').length, media=DATA.filter(d=>d.gravedad==='media').length, baja=DATA.filter(d=>d.gravedad==='baja').length;
-  const tf=DATA.reduce((s,d)=>s+d.fuentes.length,0);
-  const cats={};DATA.forEach(d=>{const c=getCat(d.categoria);cats[c]=(cats[c]||0)+1});
-  const montos=[
-    ['Bonos MML (hipoteca 20 años)','S/4,754M'],['Contratos BSF','S/97.5M'],['Perjuicio Caja Metro','S/37M+'],
-    ['Vía Expresa Norte','S/277M+'],['Deuda tributaria consolidada','~S/18.7M'],['Aportes ilícitos Lava Jato','USD 980K']
-  ];
-  document.getElementById('infoPanel').innerHTML=`
+function buildInfo(){
+  const t=D.length,tf=D.reduce((s,d)=>s+d.fuentes.length,0);
+  const secs={};D.forEach(d=>{const l=S[d.seccion]?.short||d.seccion;secs[l]=(secs[l]||0)+1});
+  const montos=[['Bonos MML (hipoteca 20 años)','S/4,754M'],['Contratos BSF','S/97.5M'],['Perjuicio Caja Metro (Contraloría)','S/37M+'],['Vía Expresa Norte','S/277M+'],['Deuda tributaria consolidada','~S/18.7M'],['Aportes ilícitos Lava Jato','USD 980K']];
+  document.getElementById('infoP').innerHTML=`
     <h3>Resumen estadístico</h3>
-    <div class="stat-grid">
-      <div class="stat-card"><div class="num">${t}</div><div class="label">Casos documentados</div></div>
-      <div class="stat-card"><div class="num">${alta}</div><div class="label">Gravedad alta</div></div>
-      <div class="stat-card"><div class="num">${tf}</div><div class="label">Fuentes enlazadas</div></div>
-      <div class="stat-card"><div class="num">${media+baja}</div><div class="label">Gravedad media/baja</div></div>
+    <div class="sg">
+      <div class="sc"><div class="n">${t}</div><div class="l">Reportes compilados</div></div>
+      <div class="sc"><div class="n">${tf}</div><div class="l">Fuentes enlazadas</div></div>
+      <div class="sc"><div class="n">${tf}</div><div class="l">URLs verificadas</div></div>
+      <div class="sc"><div class="n">0</div><div class="l">Casos sin fuente</div></div>
     </div>
-    <h3>Por categoría</h3>
-    <div class="money-grid">${Object.entries(cats).map(([k,v])=>`<div class="money-item"><span>${k}</span><span class="val">${v}</span></div>`).join('')}</div>
-    <h3>Montos involucrados</h3>
-    <div class="money-grid">${montos.map(([k,v])=>`<div class="money-item"><span>${k}</span><span class="val">${v}</span></div>`).join('')}</div>
-    <p class="note">Todas las investigaciones se encuentran en etapas previas al juicio oral. Ninguna tiene sentencia condenatoria firme. Solo se incluyen casos con al menos una fuente URL verificable. Fuentes contrastadas: 4 PDFs + 5 archivos Excel + verificación cruzada.</p>
-  `;
-}
-
-function toggleFilter(btn,type){
-  const set=type==='sev'?activeSev:activeCats;
-  const key=type==='sev'?btn.dataset.sev:btn.dataset.cat;
-  if(set.has(key)){set.delete(key);btn.classList.remove('active')}else{set.add(key);btn.classList.add('active')}
-  render();
-}
-
-function toggleSort(){
-  sortAsc=!sortAsc;
-  document.getElementById('sortLabel').textContent=sortAsc?'Más antiguos':'Más recientes';
-  document.getElementById('sortIcon').style.transform=sortAsc?'rotate(180deg)':'';
-  render();
+    <h3>Por sección</h3>
+    <div class="mg">${Object.entries(secs).map(([k,v])=>`<div class="mi"><span>${k}</span><span class="v">${v}</span></div>`).join('')}</div>
+    <h3>Montos reportados en fuentes periodísticas</h3>
+    <div class="mg">${montos.map(([k,v])=>`<div class="mi"><span>${k}</span><span class="v">${v}</span></div>`).join('')}</div>
+    <p class="note">Todos los montos provienen de fuentes periodísticas e institucionales enlazadas. Esta plataforma no realiza cálculos propios. Todas las investigaciones están en etapas previas al juicio oral según las fuentes consultadas. Ninguna ha concluido con sentencia condenatoria firme.</p>`;
 }
 
 function render(){
-  const q=document.getElementById('searchInput').value.toLowerCase().trim();
-  let items=DATA.filter(d=>{
-    if(activeSev.size&&!activeSev.has(d.gravedad))return false;
-    if(activeCats.size&&!activeCats.has(getCat(d.categoria)))return false;
-    if(q){return[d.caso,d.tipo,d.resumen,d.implicados,d.categoria,d.instancia||'',d.estado,d.monto||''].join(' ').toLowerCase().includes(q)}
+  const q=document.getElementById('si').value.toLowerCase().trim();
+  let items=D.filter(d=>{
+    if(af.size&&!af.has(d.seccion))return false;
+    if(q)return[d.caso,d.tipo,d.resumen,d.instancia||'',d.estado,d.monto||'',d.seccion].join(' ').toLowerCase().includes(q);
     return true;
   });
-  items.sort((a,b)=>{const da=new Date(a.fecha),db=new Date(b.fecha);return sortAsc?da-db:db-da});
-  const c=document.getElementById('cardsContainer');
-  document.getElementById('resultsInfo').textContent=`${items.length} de ${DATA.length} casos`;
+  const grouped={};
+  items.forEach(d=>{if(!grouped[d.seccion])grouped[d.seccion]=[];grouped[d.seccion].push(d)});
+  Object.values(grouped).forEach(arr=>arr.sort((a,b)=>new Date(b.fecha)-new Date(a.fecha)));
+  const orderedSecs=Object.keys(grouped).sort((a,b)=>(S[a]?.order||99)-(S[b]?.order||99));
+
+  document.getElementById('ri').textContent=`${items.length} de ${D.length} reportes compilados · ${items.reduce((s,d)=>s+d.fuentes.length,0)} fuentes enlazadas`;
+  const c=document.getElementById('content');
   if(!items.length){c.innerHTML='<div class="empty"><p>No se encontraron resultados.</p></div>';return}
-  c.innerHTML=items.map(d=>{
-    const sl=d.gravedad==='alta'?'Alta':d.gravedad==='media'?'Media':'Baja';
-    const ci=CATS[d.categoria]||{l:d.categoria,c:'#666'};
-    const src=d.fuentes.map(f=>`<a class="source-link" href="${f.url}" target="_blank" rel="noopener">${extIcon}${f.nombre}</a>`).join('');
-    const di=[];
-    if(d.monto)di.push({l:'Monto involucrado',v:d.monto});
-    if(d.instancia)di.push({l:'Instancia',v:d.instancia});
-    if(d.implicados)di.push({l:'Implicados',v:d.implicados});
-    if(d.periodo)di.push({l:'Período',v:d.periodo});
-    return`<div class="card sev-${d.gravedad}"><div class="card-header" onclick="this.closest('.card').classList.toggle('open')"><div class="sev-bar"></div><div class="card-main"><div class="card-top"><span class="badge-sev">${sl}</span><span class="badge-cat" style="color:${ci.c};border-color:${ci.c}40">${ci.l}</span><span class="badge-date">${d.fecha_display}</span></div><div class="card-title">${d.caso}</div><div class="card-tipo">${d.tipo}</div><div class="card-estado">Estado: ${d.estado}</div></div><svg class="card-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="card-body"><div class="card-body-inner"><div class="detail-section"><div class="detail-label">Resumen</div><div class="detail-text">${d.resumen}</div></div>${di.length?`<div class="detail-grid">${di.map(i=>`<div class="detail-item"><div class="detail-label">${i.l}</div><div class="val">${i.v}</div></div>`).join('')}</div>`:``}${d.sancion?`<div class="detail-section"><div class="detail-label">Sanción / Respuesta institucional</div><div class="detail-text">${d.sancion}</div></div>`:``}<div class="sources"><div class="detail-label">Fuentes verificadas</div>${src}</div></div></div></div>`;
-  }).join('');
+
+  let html='';
+  orderedSecs.forEach(sec=>{
+    const si=S[sec]||{label:sec,dot:'#666'};
+    html+=`<div class="section-head"><h2><span class="dot" style="background:${si.dot}"></span>${si.label}</h2></div><div class="cards">`;
+    grouped[sec].forEach(d=>{
+      const di=[];
+      if(d.monto)di.push({l:'Monto reportado',v:d.monto});
+      if(d.instancia)di.push({l:'Instancia',v:d.instancia});
+      if(d.periodo)di.push({l:'Período',v:d.periodo});
+      const src=d.fuentes.map(f=>`<a class="sl" href="${f.url}" target="_blank" rel="noopener noreferrer">${EI}${f.nombre}</a>`).join('');
+      html+=`<div class="card"><div class="ch" onclick="this.closest('.card').classList.toggle('open')"><div class="cbar" style="background:${si.dot}"></div><div class="cm"><div class="ct"><span class="badge" style="color:${si.dot};border-color:${si.dot}40">${si.short}</span><span class="bd">${d.fecha_display}</span></div><div class="titulo">${d.caso}</div><div class="tipod">${d.tipo}</div><div class="est">Estado reportado: ${d.estado}</div></div><svg class="cchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="cb"><div class="cbi"><div class="ds"><div class="dl">Resumen según fuentes consultadas</div><div class="dt">${d.resumen}</div></div>${di.length?`<div class="dg">${di.map(i=>`<div class="di"><div class="dl">${i.l}</div><div class="v">${i.v}</div></div>`).join('')}</div>`:``}${d.sancion?`<div class="ds"><div class="dl">Respuesta institucional reportada</div><div class="dt">${d.sancion}</div></div>`:``}<div class="ds"><div class="dl">Fuentes periodísticas e institucionales</div>${src}</div></div></div></div>`;
+    });
+    html+=`</div>`;
+  });
+  c.innerHTML=html;
 }
 init();
 </script>
