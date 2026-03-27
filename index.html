@@ -10,7 +10,7 @@
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#faf9f6;--surface:#fff;--text:#111;--text2:#444;--text3:#777;--border:#e0ddd6;--border2:#ccc8be;--accent:#7c2d12;--serif:'Instrument Serif',Georgia,serif;--sans:'Be Vietnam Pro',system-ui,sans-serif;--mono:'Geist Mono',monospace;
---c-inv:#7e22ce;--c-tri:#047857;--c-ele:#1d4ed8;--c-ges:#475569;--c-ant:#78716c;--c-inc:#b45309}
+--c-inv:#7e22ce;--c-tri:#047857;--c-ele:#1d4ed8;--c-ges:#475569;--c-ant:#78716c;--c-inc:#b45309;--c-can:#9f1239}
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
 
@@ -134,6 +134,7 @@ footer .fm{font-family:var(--mono);font-size:.63rem;color:var(--text3);letter-sp
         <li>La plataforma <strong>no afirma, confirma ni da por cierto</strong> ninguno de los hechos descritos en las fuentes enlazadas. Cada entrada consiste en un resumen atributivo que identifica expresamente la fuente periodística o institucional de la que proviene la información, utilizando fórmulas como «según [fuente]» o «de acuerdo con [medio]».</li>
         <li>Todas las investigaciones, denuncias y procesos aquí referenciados se encuentran, según las fuentes consultadas, en etapas previas al juicio oral. <strong>Ninguno ha concluido con sentencia condenatoria firme.</strong> La persona mencionada mantiene la presunción de inocencia reconocida por la Constitución Política del Perú y los tratados internacionales de derechos humanos.</li>
         <li>Esta es una <strong>plataforma ciudadana sin fines de lucro</strong>, diseñada exclusivamente para simplificar el acceso a información pública dispersa en múltiples fuentes periodísticas, en ejercicio del derecho a la libertad de expresión e información consagrado en el artículo 2, incisos 4 y 5 de la Constitución Política del Perú.</li>
+        <li>Esta plataforma fue desarrollada con apoyo de <strong>herramientas de inteligencia artificial</strong> (incluyendo Claude, Gemini, ChatGPT y Perplexity) para la compilación, organización y síntesis de información públicamente disponible. Las herramientas de IA fueron utilizadas como asistentes de investigación y redacción; <strong>toda la información presentada proviene exclusivamente de fuentes periodísticas e institucionales humanas</strong>, verificadas y enlazadas individualmente. La IA no generó ni inventó ningún dato factual.</li>
         <li><strong>Cualquier reclamo, rectificación o ejercicio del derecho de réplica debe dirigirse a las fuentes originales de las noticias</strong>, cuyos enlaces se proporcionan en cada entrada. Esta plataforma no es autora ni editora del contenido enlazado.</li>
         <li>Si alguna fuente enlazada fuera retirada, corregida o rectificada por su autor original, esta plataforma procederá a actualizar o eliminar la referencia correspondiente.</li>
       </ul>
@@ -179,7 +180,8 @@ const S={
   electoral:{label:'Irregularidades y sanciones electorales',short:'Electoral',color:'var(--c-ele)',dot:'#1d4ed8',order:3},
   gestion:{label:'Gestión municipal',short:'Gestión',color:'var(--c-ges)',dot:'#475569',order:4},
   antecedente:{label:'Antecedentes empresariales y vínculos documentados',short:'Antecedentes',color:'var(--c-ant)',dot:'#78716c',order:5},
-  inconducta:{label:'Inconductas y declaraciones polémicas reportadas por prensa',short:'Inconductas',color:'var(--c-inc)',dot:'#b45309',order:6}
+  candidatos:{label:'Candidatos cuestionados de Renovación Popular',short:'Candidatos',color:'var(--c-can)',dot:'#9f1239',order:6},
+  inconducta:{label:'Inconductas y declaraciones polémicas reportadas por prensa',short:'Inconductas',color:'var(--c-inc)',dot:'#b45309',order:7}
 };
 const EI='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
 
@@ -211,7 +213,7 @@ function buildFilters(){
 function buildInfo(){
   const t=D.length,tf=D.reduce((s,d)=>s+d.fuentes.length,0);
   const secs={};D.forEach(d=>{const l=S[d.seccion]?.short||d.seccion;secs[l]=(secs[l]||0)+1});
-  const montos=[['Bonos MML (hipoteca 20 años)','S/4,754M'],['Contratos BSF','S/97.5M'],['Perjuicio Caja Metro (Contraloría)','S/37M+'],['Vía Expresa Norte','S/277M+'],['Deuda tributaria consolidada','~S/18.7M'],['Aportes ilícitos Lava Jato','USD 980K']];
+  const montos=[['Bonos MML (hipoteca 20 años)','S/4,754M'],['Contratos BSF','S/97.5M'],['Perjuicio Caja Metro (Contraloría)','S/37M+'],['Vía Expresa Norte','S/277M+'],['Deuda tributaria consolidada','~S/18.7M'],['Aportes ilícitos Lava Jato','USD 980K'],['Fideicomiso Sodalicio-ACRES','36 inmuebles'],['Peculado Alvarado (candidato)','S/4M']];
   document.getElementById('infoP').innerHTML=`
     <h3>Resumen estadístico</h3>
     <div class="sg">
