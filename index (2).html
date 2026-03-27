@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expediente Porky 2026</title>
+<meta name="description" content="Recopilación ciudadana de denuncias, investigaciones e irregularidades documentadas públicamente sobre Rafael López Aliaga.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400;500&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#faf9f6;
+  --surface:#fff;
+  --text:#111;
+  --text2:#444;
+  --text3:#777;
+  --border:#e0ddd6;
+  --border2:#d0cdc6;
+  --alta:#b91c1c;
+  --alta-bg:#fef2f2;
+  --alta-border:#fca5a5;
+  --media:#b45309;
+  --media-bg:#fffbeb;
+  --media-border:#fcd34d;
+  --baja:#4d7c0f;
+  --baja-bg:#f7fee7;
+  --baja-border:#bef264;
+  --penal:#7e22ce;
+  --electoral:#1d4ed8;
+  --admin:#047857;
+  --etico:#a16207;
+  --politico:#475569;
+  --contextual:#64748b;
+  --accent:#991b1b;
+  --serif:'Instrument Serif',Georgia,serif;
+  --sans:'Be Vietnam Pro',system-ui,sans-serif;
+  --mono:'Geist Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh}
+
+/* === IMPORTANT BANNER === */
+.important-bar{
+  background:#1a1a1a;position:sticky;top:0;z-index:100;
+}
+.important-toggle{
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  width:100%;padding:10px 16px;border:none;background:none;
+  color:#e5e5e5;font-family:var(--mono);font-size:0.72rem;
+  letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;
+  transition:background .2s;
+}
+.important-toggle:hover{background:#2a2a2a}
+.important-toggle svg{width:14px;height:14px;transition:transform .3s}
+.important-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
+.important-content{
+  max-height:0;overflow:hidden;transition:max-height .4s ease;
+  background:#222;
+}
+.important-content.open{max-height:300px}
+.important-content p{
+  padding:12px 20px 16px;color:#aaa;font-size:0.78rem;line-height:1.6;
+  max-width:800px;margin:0 auto;text-align:center;
+}
+
+/* === HEADER === */
+header{
+  padding:48px 20px 36px;text-align:center;
+  border-bottom:1px solid var(--border);
+  background:linear-gradient(180deg,#f5f4f0 0%,var(--bg) 100%);
+}
+header h1{
+  font-family:var(--serif);font-size:clamp(2.2rem,6vw,3.6rem);
+  font-weight:400;letter-spacing:-0.02em;line-height:1.1;
+  color:var(--accent);margin-bottom:8px;
+}
+header .subtitle{
+  font-family:var(--mono);font-size:0.72rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--text3);margin-bottom:16px;
+}
+header .desc{
+  max-width:600px;margin:0 auto;font-size:0.88rem;color:var(--text2);
+  line-height:1.6;
+}
+.stats-bar{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;
+  margin-top:20px;font-family:var(--mono);font-size:0.7rem;
+  color:var(--text3);letter-spacing:0.03em;
+}
+.stats-bar span{white-space:nowrap}
+.stats-bar strong{color:var(--text)}
+
+/* === CONTROLS === */
+.controls{
+  position:sticky;top:42px;z-index:50;background:var(--bg);
+  border-bottom:1px solid var(--border);padding:12px 16px;
+  backdrop-filter:blur(12px);
+}
+.controls-inner{
+  max-width:960px;margin:0 auto;
+  display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+}
+.search-box{
+  flex:1 1 220px;position:relative;
+}
+.search-box input{
+  width:100%;padding:9px 12px 9px 36px;border:1px solid var(--border);
+  border-radius:6px;font-family:var(--sans);font-size:0.85rem;
+  background:var(--surface);color:var(--text);outline:none;
+  transition:border-color .2s;
+}
+.search-box input:focus{border-color:var(--accent)}
+.search-box svg{
+  position:absolute;left:10px;top:50%;transform:translateY(-50%);
+  width:16px;height:16px;color:var(--text3);pointer-events:none;
+}
+.filter-group{display:flex;flex-wrap:wrap;gap:6px}
+.filter-btn{
+  padding:6px 12px;border:1px solid var(--border);border-radius:20px;
+  background:var(--surface);font-family:var(--mono);font-size:0.68rem;
+  letter-spacing:0.04em;text-transform:uppercase;color:var(--text2);
+  cursor:pointer;transition:all .2s;white-space:nowrap;
+}
+.filter-btn:hover{border-color:var(--text3)}
+.filter-btn.active{background:var(--text);color:var(--surface);border-color:var(--text)}
+.filter-btn.sev-alta.active{background:var(--alta);border-color:var(--alta);color:#fff}
+.filter-btn.sev-media.active{background:var(--media);border-color:var(--media);color:#fff}
+.filter-btn.sev-baja.active{background:var(--baja);border-color:var(--baja);color:#fff}
+.sort-btn{
+  padding:6px 12px;border:1px solid var(--border);border-radius:6px;
+  background:var(--surface);font-family:var(--mono);font-size:0.68rem;
+  letter-spacing:0.04em;color:var(--text2);cursor:pointer;
+  display:flex;align-items:center;gap:4px;transition:all .2s;
+  margin-left:auto;
+}
+.sort-btn:hover{border-color:var(--text3)}
+
+/* === RESULTS COUNT === */
+.results-info{
+  max-width:960px;margin:16px auto 4px;padding:0 16px;
+  font-family:var(--mono);font-size:0.72rem;color:var(--text3);
+  letter-spacing:0.03em;
+}
+
+/* === CARDS === */
+.cards{max-width:960px;margin:0 auto;padding:8px 16px 60px}
+.card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:8px;margin-bottom:10px;overflow:hidden;
+  transition:box-shadow .2s,border-color .2s;
+}
+.card:hover{box-shadow:0 2px 12px rgba(0,0,0,0.06);border-color:var(--border2)}
+.card-header{
+  padding:14px 16px;cursor:pointer;display:flex;gap:12px;
+  align-items:flex-start;user-select:none;
+}
+.sev-indicator{
+  flex-shrink:0;width:4px;border-radius:2px;min-height:44px;
+  align-self:stretch;
+}
+.sev-alta .sev-indicator{background:var(--alta)}
+.sev-media .sev-indicator{background:var(--media)}
+.sev-baja .sev-indicator{background:var(--baja)}
+
+.card-main{flex:1;min-width:0}
+.card-top{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:4px}
+.badge-sev{
+  font-family:var(--mono);font-size:0.62rem;letter-spacing:0.06em;
+  text-transform:uppercase;padding:2px 7px;border-radius:3px;font-weight:500;
+}
+.sev-alta .badge-sev{background:var(--alta-bg);color:var(--alta);border:1px solid var(--alta-border)}
+.sev-media .badge-sev{background:var(--media-bg);color:var(--media);border:1px solid var(--media-border)}
+.sev-baja .badge-sev{background:var(--baja-bg);color:var(--baja);border:1px solid var(--baja-border)}
+
+.badge-cat{
+  font-family:var(--mono);font-size:0.62rem;letter-spacing:0.04em;
+  padding:2px 7px;border-radius:3px;border:1px solid var(--border);
+  color:var(--text3);
+}
+.badge-date{
+  font-family:var(--mono);font-size:0.65rem;color:var(--text3);
+  margin-left:auto;white-space:nowrap;
+}
+.card-title{
+  font-size:0.95rem;font-weight:600;line-height:1.35;color:var(--text);
+  margin-bottom:2px;
+}
+.card-tipo{font-size:0.78rem;color:var(--text2)}
+.card-estado{
+  font-size:0.76rem;color:var(--text3);margin-top:3px;
+  font-style:italic;
+}
+.card-chevron{
+  flex-shrink:0;width:20px;height:20px;color:var(--text3);
+  transition:transform .3s;align-self:center;
+}
+.card.open .card-chevron{transform:rotate(180deg)}
+
+.card-body{
+  max-height:0;overflow:hidden;transition:max-height .4s ease;
+}
+.card.open .card-body{max-height:2000px}
+.card-body-inner{
+  padding:0 16px 16px 32px;
+  border-top:1px solid var(--border);
+}
+.detail-section{margin-top:12px}
+.detail-label{
+  font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;
+  text-transform:uppercase;color:var(--text3);margin-bottom:4px;
+}
+.detail-text{font-size:0.84rem;color:var(--text2);line-height:1.6}
+.detail-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:12px;margin-top:12px;
+}
+.detail-item{}
+.detail-item .val{font-size:0.84rem;color:var(--text);font-weight:500}
+
+.sources{margin-top:14px}
+.sources-title{
+  font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;
+  text-transform:uppercase;color:var(--text3);margin-bottom:6px;
+}
+.source-link{
+  display:inline-flex;align-items:center;gap:4px;
+  padding:5px 10px;margin:3px 4px 3px 0;
+  border:1px solid var(--border);border-radius:5px;
+  font-size:0.78rem;color:var(--accent);text-decoration:none;
+  background:var(--bg);transition:all .2s;line-height:1.3;
+}
+.source-link:hover{background:var(--alta-bg);border-color:var(--alta-border)}
+.source-link svg{width:12px;height:12px;flex-shrink:0}
+
+/* === FOOTER === */
+footer{
+  border-top:1px solid var(--border);padding:32px 20px;
+  text-align:center;background:#f0eeea;
+}
+footer .disclaimer{
+  max-width:640px;margin:0 auto 16px;font-size:0.8rem;
+  color:var(--text2);line-height:1.65;
+}
+footer .meta{
+  font-family:var(--mono);font-size:0.65rem;color:var(--text3);
+  letter-spacing:0.04em;
+}
+
+/* === EMPTY STATE === */
+.empty{
+  text-align:center;padding:60px 20px;color:var(--text3);
+}
+.empty p{font-size:0.9rem}
+
+/* === SCROLL TO TOP === */
+.scroll-top{
+  position:fixed;bottom:20px;right:20px;width:40px;height:40px;
+  border-radius:50%;background:var(--text);color:var(--surface);
+  border:none;cursor:pointer;display:flex;align-items:center;
+  justify-content:center;opacity:0;transform:translateY(10px);
+  transition:all .3s;z-index:60;box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+.scroll-top.visible{opacity:1;transform:translateY(0)}
+.scroll-top svg{width:18px;height:18px}
+
+/* === RESPONSIVE === */
+@media(max-width:640px){
+  header{padding:32px 16px 24px}
+  .controls{top:42px;padding:10px 12px}
+  .controls-inner{gap:6px}
+  .search-box{flex:1 1 100%}
+  .filter-group{gap:4px}
+  .filter-btn{padding:5px 9px;font-size:0.63rem}
+  .sort-btn{font-size:0.63rem;margin-left:0}
+  .card-header{padding:12px;gap:8px}
+  .card-title{font-size:0.88rem}
+  .card-body-inner{padding:0 12px 14px 20px}
+  .detail-grid{grid-template-columns:1fr}
+  .badge-date{margin-left:0;display:block;width:100%;margin-top:2px}
+  .results-info{padding:0 12px}
+  .cards{padding:8px 12px 60px}
+}
+@media(max-width:380px){
+  header h1{font-size:1.9rem}
+}
+</style>
+</head>
+<body>
+
+<!-- IMPORTANT BANNER -->
+<div class="important-bar">
+  <button class="important-toggle" id="impToggle" aria-expanded="false" onclick="toggleImportant()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    Importante — Leer antes de usar
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+  </button>
+  <div class="important-content" id="impContent">
+    <p>Esta plataforma solo se encarga de recoger información actualmente publicada en internet sobre el tema, no está confirmando ni afirmando nada sobre el señor en cuestión. Es una plataforma ciudadana diseñada para simplificar la búsqueda de información. Cualquier reclamo dirigirlo a las fuentes de las noticias. Todas las investigaciones recopiladas aquí se encuentran en etapas previas al juicio oral; ninguna ha concluido con sentencia condenatoria firme. La persona en cuestión mantiene la presunción de inocencia.</p>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="subtitle">archivo ciudadano · elecciones 2026</div>
+  <h1>Expediente Porky 2026</h1>
+  <p class="desc">Recopilación verificada de denuncias, investigaciones, irregularidades e inconductas documentadas públicamente sobre Rafael López Aliaga, candidato presidencial.</p>
+  <div class="stats-bar" id="statsBar"></div>
+</header>
+
+<!-- CONTROLS -->
+<div class="controls">
+  <div class="controls-inner">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="Buscar caso, persona, entidad...">
+    </div>
+    <div class="filter-group" id="sevFilters">
+      <button class="filter-btn sev-alta" data-sev="alta" onclick="toggleSev(this)">🔴 Alta</button>
+      <button class="filter-btn sev-media" data-sev="media" onclick="toggleSev(this)">🟠 Media</button>
+      <button class="filter-btn sev-baja" data-sev="baja" onclick="toggleSev(this)">🟢 Baja</button>
+    </div>
+    <div class="filter-group" id="catFilters"></div>
+    <button class="sort-btn" id="sortBtn" onclick="toggleSort()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      <span id="sortLabel">Más recientes</span>
+    </button>
+  </div>
+</div>
+
+<div class="results-info" id="resultsInfo"></div>
+
+<!-- CARDS -->
+<div class="cards" id="cardsContainer"></div>
+
+<!-- FOOTER -->
+<footer>
+  <p class="disclaimer">Esta plataforma solo se encarga de recoger información actualmente publicada en internet sobre el tema, no está confirmando ni afirmando nada sobre el señor en cuestión. Es una plataforma ciudadana diseñada para simplificar la búsqueda de información. Cualquier reclamo dirigirlo a las fuentes de las noticias.</p>
+  <p class="meta">Expediente Porky 2026 · Última actualización: marzo 2026 · Fuentes verificadas enlazadas individualmente</p>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+let DATA = [];
+let sortAsc = false;
+let activeSev = new Set();
+let activeCats = new Set();
+
+const CATEGORIES = {
+  'Investigación penal': {label:'Penal', color:'#7e22ce'},
+  'Irregularidad tributaria': {label:'Tributario', color:'#047857'},
+  'Irregularidad electoral': {label:'Electoral', color:'#1d4ed8'},
+  'Infracción electoral': {label:'Electoral', color:'#1d4ed8'},
+  'Gestión municipal': {label:'Gestión', color:'#475569'},
+  'Antecedente empresarial': {label:'Antecedente', color:'#64748b'},
+  'Amenaza a periodista': {label:'Prensa', color:'#b91c1c'},
+  'Declaración racista': {label:'Racismo', color:'#a16207'},
+  'Inconducta': {label:'Inconducta', color:'#92400e'},
+};
+
+function getCatGroup(cat) {
+  return CATEGORIES[cat]?.label || cat;
+}
+
+async function init() {
+  try {
+    const res = await fetch('data.json');
+    DATA = await res.json();
+  } catch(e) {
+    document.getElementById('cardsContainer').innerHTML = '<div class="empty"><p>Error cargando datos. Asegúrate de que data.json está en el mismo directorio.</p></div>';
+    return;
+  }
+  buildCatFilters();
+  buildStats();
+  render();
+
+  document.getElementById('searchInput').addEventListener('input', render);
+
+  window.addEventListener('scroll', () => {
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 600);
+  });
+}
+
+function buildCatFilters() {
+  const groups = [...new Set(DATA.map(d => getCatGroup(d.categoria)))];
+  const container = document.getElementById('catFilters');
+  groups.forEach(g => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.dataset.cat = g;
+    btn.textContent = g;
+    btn.onclick = () => toggleCat(btn);
+    container.appendChild(btn);
+  });
+}
+
+function buildStats() {
+  const alta = DATA.filter(d => d.gravedad === 'alta').length;
+  const total = DATA.length;
+  const conFuentes = DATA.filter(d => d.fuentes.length > 0).length;
+  const totalFuentes = DATA.reduce((s,d) => s + d.fuentes.length, 0);
+  document.getElementById('statsBar').innerHTML =
+    `<span><strong>${total}</strong> casos documentados</span>` +
+    `<span><strong>${alta}</strong> de gravedad alta</span>` +
+    `<span><strong>${totalFuentes}</strong> fuentes enlazadas</span>` +
+    `<span><strong>${conFuentes}</strong> casos con fuentes verificadas</span>`;
+}
+
+function toggleSev(btn) {
+  const s = btn.dataset.sev;
+  if (activeSev.has(s)) { activeSev.delete(s); btn.classList.remove('active'); }
+  else { activeSev.add(s); btn.classList.add('active'); }
+  render();
+}
+
+function toggleCat(btn) {
+  const c = btn.dataset.cat;
+  if (activeCats.has(c)) { activeCats.delete(c); btn.classList.remove('active'); }
+  else { activeCats.add(c); btn.classList.add('active'); }
+  render();
+}
+
+function toggleSort() {
+  sortAsc = !sortAsc;
+  document.getElementById('sortLabel').textContent = sortAsc ? 'Más antiguos' : 'Más recientes';
+  document.getElementById('sortBtn').querySelector('svg').style.transform = sortAsc ? 'rotate(180deg)' : '';
+  render();
+}
+
+function toggleImportant() {
+  const c = document.getElementById('impContent');
+  const t = document.getElementById('impToggle');
+  const open = c.classList.toggle('open');
+  t.setAttribute('aria-expanded', open);
+}
+
+function render() {
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  let items = DATA.filter(d => {
+    if (activeSev.size && !activeSev.has(d.gravedad)) return false;
+    if (activeCats.size && !activeCats.has(getCatGroup(d.categoria))) return false;
+    if (q) {
+      const hay = [d.caso, d.tipo, d.resumen, d.implicados, d.categoria, d.instancia, d.estado, d.monto || '']
+        .join(' ').toLowerCase().includes(q);
+      if (!hay) return false;
+    }
+    return true;
+  });
+
+  items.sort((a, b) => {
+    const da = new Date(a.fecha), db = new Date(b.fecha);
+    return sortAsc ? da - db : db - da;
+  });
+
+  const container = document.getElementById('cardsContainer');
+
+  if (!items.length) {
+    container.innerHTML = '<div class="empty"><p>No se encontraron resultados con los filtros seleccionados.</p></div>';
+    document.getElementById('resultsInfo').textContent = '0 resultados';
+    return;
+  }
+
+  document.getElementById('resultsInfo').textContent = `${items.length} de ${DATA.length} casos`;
+
+  container.innerHTML = items.map(d => {
+    const sevLabel = d.gravedad === 'alta' ? 'Alta' : d.gravedad === 'media' ? 'Media' : 'Baja';
+    const catInfo = CATEGORIES[d.categoria] || {label: d.categoria, color: '#666'};
+
+    const sourcesHTML = d.fuentes.length ? d.fuentes.map(f =>
+      `<a class="source-link" href="${f.url}" target="_blank" rel="noopener">` +
+      `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>` +
+      `${f.nombre}</a>`
+    ).join('') : '<span style="font-size:0.78rem;color:var(--text3)">Fuentes documentadas en informes citados en el expediente</span>';
+
+    const detailItems = [];
+    if (d.monto) detailItems.push({label:'Monto involucrado', val:d.monto});
+    if (d.instancia) detailItems.push({label:'Instancia', val:d.instancia});
+    if (d.implicados) detailItems.push({label:'Implicados', val:d.implicados});
+    if (d.periodo) detailItems.push({label:'Período', val:d.periodo});
+
+    return `
+    <div class="card sev-${d.gravedad}" data-id="${d.id}">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="sev-indicator"></div>
+        <div class="card-main">
+          <div class="card-top">
+            <span class="badge-sev">${sevLabel}</span>
+            <span class="badge-cat" style="color:${catInfo.color};border-color:${catInfo.color}40">${catInfo.label}</span>
+            <span class="badge-date">${d.fecha_display}</span>
+          </div>
+          <div class="card-title">${d.caso}</div>
+          <div class="card-tipo">${d.tipo}</div>
+          <div class="card-estado">Estado: ${d.estado}</div>
+        </div>
+        <svg class="card-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="card-body">
+        <div class="card-body-inner">
+          <div class="detail-section">
+            <div class="detail-label">Resumen</div>
+            <div class="detail-text">${d.resumen}</div>
+          </div>
+          ${detailItems.length ? `
+          <div class="detail-grid">
+            ${detailItems.map(i => `<div class="detail-item"><div class="detail-label">${i.label}</div><div class="val">${i.val}</div></div>`).join('')}
+          </div>` : ''}
+          ${d.sancion ? `<div class="detail-section"><div class="detail-label">Sanción / Respuesta institucional</div><div class="detail-text">${d.sancion}</div></div>` : ''}
+          <div class="sources">
+            <div class="sources-title">Fuentes verificadas</div>
+            ${sourcesHTML}
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggleCard(header) {
+  header.closest('.card').classList.toggle('open');
+}
+
+init();
+</script>
+</body>
+</html>
