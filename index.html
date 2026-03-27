@@ -213,7 +213,7 @@ function buildFilters(){
 function buildInfo(){
   const t=D.length,tf=D.reduce((s,d)=>s+d.fuentes.length,0);
   const secs={};D.forEach(d=>{const l=S[d.seccion]?.short||d.seccion;secs[l]=(secs[l]||0)+1});
-  const montos=[['Bonos MML (hipoteca 20 años)','S/4,754M'],['Contratos BSF','S/97.5M'],['Perjuicio Caja Metro (Contraloría)','S/37M+'],['Vía Expresa Norte','S/277M+'],['Deuda tributaria consolidada','~S/18.7M'],['Aportes ilícitos Lava Jato','USD 980K'],['Fideicomiso Sodalicio-ACRES','36 inmuebles'],['Peculado Alvarado (candidato)','S/4M']];
+  const montos=[['Bonos MML (hipoteca 20 años)','S/4,754M'],['Laudos Rutas de Lima','~USD 200M'],['Laudo Lima Expresa','USD 83M+'],['Multa MTC / Vía Expresa Sur','S/160M'],['Contratos BSF','S/97.5M'],['Viaductos Javier Prado','S/550M'],['Vía Expresa Sur (obra total)','S/830M+'],['Perjuicio Caja Metro (Contraloría)','S/37M+'],['Vía Expresa Norte','S/277M+'],['Deuda tributaria consolidada','~S/18.7M'],['Fideicomiso Sodalicio-ACRES','36 inmuebles'],['Aportes ilícitos Lava Jato','USD 980K']];
   document.getElementById('infoP').innerHTML=`
     <h3>Resumen estadístico</h3>
     <div class="sg">

@@ -958,5 +958,185 @@
         "url": "https://larepublica.pe/politica/2026/03/07/elecciones-2026-candidatos-con-sentencias-violencia-familiar"
       }
     ]
+  },
+  {
+    "id": 38,
+    "seccion": "gestion",
+    "caso": "Vía Expresa Sur: inauguración incompleta, primera muerte y multa de S/160 millones",
+    "tipo": "Obra con deficiencias documentadas por Contraloría, MTC y medios",
+    "fecha": "2026-01-18",
+    "fecha_display": "Ene 2026 (muerte)",
+    "periodo": "2023 – 2026",
+    "monto": "S/830M+ (obra total); multa S/160M del MTC, según Infobae",
+    "instancia": "MTC / Contraloría / Fiscalía",
+    "estado": "Multa de S/160M impuesta por MTC; familiares de víctima anunciaron demanda penal, según fuentes",
+    "resumen": "Según Infobae, La República y TV Perú, la Vía Expresa Sur fue inaugurada el 11 de septiembre de 2025 con apenas un 30% de avance real: solo cinco kilómetros habilitados, sin señalización ni semaforización completa. De acuerdo con Infobae, vecinos de Surco reportaron al menos siete accidentes en los primeros días por ausencia de semáforos e iluminación. Según TV Perú, el 18 de enero de 2026, Eulogia Quihui Suica (66 años) falleció atropellada al intentar cruzar en una zona sin puentes peatonales. De acuerdo con Infobae, los familiares anunciaron demanda penal contra la Municipalidad. La Municipalidad de Surco, según las fuentes consultadas, habría emitido un comunicado señalando que advirtió reiteradamente a EMAPE sobre los riesgos «sin recibir respuesta efectiva». Según reportes del MTC citados por Infobae, la obra se ejecutó sin certificación ambiental vigente (la última venció en 2020), lo que derivó en una multa de S/160 millones. La Municipalidad calificó la sanción como «acoso político», según las mismas fuentes. De acuerdo con La República, especialistas advirtieron sobre los efectos negativos del método «fast track» utilizado por la gestión para ejecutar obras sin expedientes técnicos sólidos.",
+    "sancion": "Multa S/160M del MTC; demanda penal de familiares de víctima, según fuentes",
+    "fuentes": [
+      {
+        "nombre": "Infobae — Vía Expresa Sur cobra primera víctima",
+        "url": "https://www.infobae.com/peru/2026/01/18/via-expresa-sur-cobra-su-primera-victima/"
+      },
+      {
+        "nombre": "TV Perú — Mujer muere atropellada en Vía Expresa Sur",
+        "url": "https://www.tvperu.gob.pe/noticias/locales/surco-mujer-muere-atropellada-al-cruzar-la-via-expresa-sur"
+      },
+      {
+        "nombre": "Infobae — MTC multa y sanciones",
+        "url": "https://www.infobae.com/peru/2025/08/08/mtc-responde-a-rafael-lopez-aliaga-y-aclara-que-aun-no/"
+      },
+      {
+        "nombre": "La República — Obras express sin estudios sólidos",
+        "url": "https://larepublica.pe/sociedad/2025/09/obras-express-de-rafael-lopez-aliaga-sin-estudios-solidos"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "seccion": "gestion",
+    "caso": "Vía Expresa Sur: expropiaciones y desalojos violentos de ~100 familias",
+    "tipo": "Desalojos documentados por Infobae y medios locales",
+    "fecha": "2024-11-14",
+    "fecha_display": "Nov 2024",
+    "periodo": "Oct – Nov 2024",
+    "monto": "Multas de S/10,000+ a vecinos por ocupar sus viviendas, según fuentes",
+    "instancia": "MML / EMAPE",
+    "estado": "Desalojos ejecutados; denuncias de vecinos documentadas por prensa",
+    "resumen": "Según Infobae, en octubre de 2024, vecinos del Asentamiento Humano Comuco en Surco denunciaron que no hubo proceso de negociación para las expropiaciones vinculadas a la ampliación de la Vía Expresa Sur, y que habrían recibido notificaciones de demolición con multas superiores a S/10,000 por ocupar sus propias viviendas. De acuerdo con la misma fuente, en la madrugada del 14 de noviembre de 2024, aproximadamente 100 familias fueron desalojadas en la urbanización La Ensenada (Surco) con camiones, fuerzas policiales y personal municipal. Según los reportes, vecinos denunciaron que agentes habrían irrumpido violentamente en sus casas frente a sus hijos y que se les habría cortado el suministro eléctrico. Las fuentes señalan que varios afectados aseguraron haber pagado arbitrios durante más de 20 años y contar con certificados de posesión emitidos por la Municipalidad Distrital. La Municipalidad habría enmarcado las acciones en una «ordenanza de emergencia», según Infobae.",
+    "sancion": "Desalojos ejecutados; denuncias de vecinos documentadas",
+    "fuentes": [
+      {
+        "nombre": "Infobae — Ampliación Vía Expresa desata conflicto en Surco",
+        "url": "https://www.infobae.com/peru/2024/10/ampliacion-de-via-expresa-sur-desata-conflicto-en-surco/"
+      },
+      {
+        "nombre": "Infobae — Vecinos denuncian expropiación sin negociación",
+        "url": "https://www.infobae.com/peru/2024/10/via-expresa-sur-vecinos-de-surco-denuncian-expropiacion/"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "seccion": "gestion",
+    "caso": "Caso Rutas de Lima: laudos por US$200 millones confirmados por Corte de EE.UU.",
+    "tipo": "Laudos arbitrales internacionales confirmados contra la MML",
+    "fecha": "2025-06-24",
+    "fecha_display": "Jun 2025",
+    "periodo": "2020 – presente",
+    "monto": "~US$200 millones, según LP Derecho y Canal B",
+    "instancia": "Corte de Apelaciones del Distrito de Columbia (EE.UU.)",
+    "estado": "Laudos confirmados; MML anunció apelación ante Corte Suprema de EE.UU., según fuentes",
+    "resumen": "Según LP Derecho y Canal B, en junio de 2025 la Corte de Apelaciones del Distrito de Columbia (EE.UU.) confirmó dos laudos arbitrales internacionales (emitidos en 2020 y 2022) que ordenan a la MML pagar aproximadamente US$200 millones a Rutas de Lima. De acuerdo con LP Derecho, la corte habría descartado los argumentos de corrupción presentados por los abogados de la MML, calificándolos de «inconsistentes» por no demostrar relación directa entre aportes de campaña y contratos. Según Infobae, en octubre de 2025 Brookfield (propietaria de Rutas de Lima desde 2016) anunció la liquidación de la concesionaria, señalando que las «injustas y arbitrarias medidas del Estado peruano» habrían destruido su viabilidad financiera. López Aliaga, de acuerdo con Infobae, celebró la quiebra declarando «¡Bien quebrados están!» y anunció apelación ante la Corte Suprema de EE.UU. Los pasivos derivados de estos laudos se suman a la deuda municipal que heredaron las gestiones posteriores.",
+    "sancion": "Laudos confirmados por corte de EE.UU.; empresa liquidada, según fuentes",
+    "fuentes": [
+      {
+        "nombre": "LP Derecho — Corte de EE.UU. confirma laudos",
+        "url": "https://lpderecho.pe/corte-estados-unidos-confirma-laudos-arbitrales-favor-rutas-lima/"
+      },
+      {
+        "nombre": "Canal B — RLA apelará ante Corte Suprema EE.UU.",
+        "url": "https://canalb.pe/lopez-aliaga-persiste-en-revertir-laudos-rutas-de-lima/"
+      },
+      {
+        "nombre": "Infobae — López Aliaga celebra liquidación de Rutas de Lima",
+        "url": "https://www.infobae.com/peru/2025/10/01/alcalde-de-lima-celebra-la-liquidacion-de-concesionaria-vial/"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "seccion": "gestion",
+    "caso": "Caso Lima Expresa (Línea Amarilla): arbitraje perdido, concesión extendida hasta 2055",
+    "tipo": "Laudo arbitral internacional contra la MML",
+    "fecha": "2025-09-15",
+    "fecha_display": "Sep 2025",
+    "periodo": "2024 – 2025",
+    "monto": "+US$83 millones (valor actualizado); concesión extendida ~6 años, según La República",
+    "instancia": "Cámara de Arbitraje Internacional de París / Poder Judicial",
+    "estado": "Laudo reconocido por PJ peruano, según La República",
+    "resumen": "Según La República y Gestión, en 2024 la Cámara de Arbitraje Internacional de París emitió un laudo ordenando a la MML compensar a Lima Expresa (subsidiaria de Vinci Highways) tras rechazar la pretensión municipal de anular el contrato de la Línea Amarilla por «corrupción». De acuerdo con estas fuentes, el tribunal habría concluido que la Municipalidad no pudo probar corrupción en la negociación ni firma del contrato. Según La República, en abril de 2025 el laudo definitivo fijó como compensación una extensión de casi 6 años en la concesión (hasta 2055), con un valor actualizado superior a US$83 millones. De acuerdo con las fuentes, en septiembre de 2025 el Poder Judicial peruano reconoció la validez del laudo, declarando infundada la oposición de la MML. López Aliaga, según Gestión, rechazó el laudo y declaró que «a grupos criminales no les paga nada». La consecuencia práctica, según las fuentes, es que los limeños pagarán peajes en la Vía de Evitamiento y Línea Amarilla por más de seis años adicionales.",
+    "sancion": "Laudo reconocido por PJ peruano; concesión extendida hasta 2055, según fuentes",
+    "fuentes": [
+      {
+        "nombre": "La República — Concesión Línea Amarilla hasta 2055",
+        "url": "https://larepublica.pe/economia/2025/04/lima-expresa-concesion-linea-amarilla-hasta-2055/"
+      },
+      {
+        "nombre": "Gestión — MML pierde arbitraje contra Lima Expresa",
+        "url": "https://gestion.pe/peru/mml-pierde-arbitraje-contra-lima-expresa/"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "seccion": "gestion",
+    "caso": "Degradación crediticia de Moody's: Lima pierde grado de inversión («bono basura»)",
+    "tipo": "Degradación crediticia documentada por Moody's",
+    "fecha": "2025-06-15",
+    "fecha_display": "Jun 2025",
+    "periodo": "2025",
+    "monto": "62% de ingresos operativos comprometidos; ratio deuda/ingresos: 248%, según Moody's (reportado por Gestión e Infobae)",
+    "instancia": "Moody's Investors Service",
+    "estado": "Calificación degradada de Baa3 a Ba1, según Gestión",
+    "resumen": "Según Gestión e Infobae, en junio de 2025 la agencia calificadora Moody's degradó la calificación crediticia de la Municipalidad de Lima de Baa3 a Ba1, retirándole el grado de inversión y ubicándola en nivel especulativo (conocido como «bono basura»). De acuerdo con el informe de Moody's citado por estas fuentes, el 62% de los ingresos operativos de la municipalidad estaría comprometido en fideicomisos para el pago de bonos, y la relación deuda/ingresos habría escalado al 248%. Según las mismas fuentes, el pago de intereses habría crecido del 16% al 24% del presupuesto. De acuerdo con un informe del Grupo Propuesta Ciudadana citado por La República, entre 2026 y 2030 el servicio de la deuda demandaría cerca de S/2,747 millones, lo que según el economista Armando Mendoza significaría que las administraciones futuras verían recortada casi a la mitad su capacidad operativa. El Consejo Fiscal del MEF, según las fuentes, habría concluido que «la deuda de la MML se multiplicó por más de 3.4 veces desde 2022».",
+    "sancion": "Degradación crediticia a nivel especulativo, según Moody's",
+    "fuentes": [
+      {
+        "nombre": "Gestión — Moody's baja calificación de Lima",
+        "url": "https://gestion.pe/economia/moodys-baja-calificacion-de-lima-y-le-quita-grado-de-inversion/"
+      },
+      {
+        "nombre": "Infobae — Moody's degrada calificación MML",
+        "url": "https://www.infobae.com/peru/2025/06/moodys-degrada-calificacion-de-la-municipalidad-de-lima/"
+      },
+      {
+        "nombre": "La República — MML hipotecada por endeudamiento",
+        "url": "https://larepublica.pe/economia/2025/municipalidad-de-lima-hipotecada-por-endeudamiento-desmedido/"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "seccion": "gestion",
+    "caso": "Viaductos Javier Prado: S/550 millones con deficiencias detectadas por Contraloría",
+    "tipo": "Obras observadas por Contraloría General de la República",
+    "fecha": "2026-01-15",
+    "fecha_display": "Ene 2026",
+    "periodo": "2025 – 2026",
+    "monto": "S/550 millones, según Contraloría (reportado por La República)",
+    "instancia": "Contraloría General de la República / Invermet",
+    "estado": "Observados por Contraloría; riesgo de sobrecosto, según fuentes",
+    "resumen": "Según La República e Infobae, la Contraloría General de la República emitió informes de visita de control (diciembre 2025 – enero 2026) alertando graves deficiencias en los tres viaductos proyectados sobre la avenida Javier Prado (San Isidro, Lince, La Molina), con inversión estimada de S/550 millones. De acuerdo con las fuentes, el postor ganador del tramo Sánchez Carrión no habría evaluado la probabilidad de riesgos en su oferta técnica ni incluido partidas para mitigación ambiental. Según La República, la Contraloría también habría advertido la ausencia de certificación presupuestal para 2026, lo que podría paralizar la obra. En el tramo Begonias-Arenales, según las mismas fuentes, el consorcio adjudicatario no habría acreditado oportunamente la experiencia del personal técnico.",
+    "sancion": "Observados por Contraloría; riesgo de paralización por falta de presupuesto, según fuentes",
+    "fuentes": [
+      {
+        "nombre": "La República — Contraloría alerta riesgos viaductos",
+        "url": "https://larepublica.pe/sociedad/2026/01/contraloria-alerta-riesgos-de-sobrecostos-viaductos-javier-prado/"
+      },
+      {
+        "nombre": "Infobae — Viaductos Javier Prado en riesgo",
+        "url": "https://www.infobae.com/peru/2026/01/viaductos-sobre-la-av-javier-prado-en-riesgo/"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "seccion": "gestion",
+    "caso": "SISOL Miraflores: S/2.5 millones en alquiler de local sin funcionar, con presunto conflicto de interés",
+    "tipo": "Gasto cuestionado documentado por Contraloría y El Comercio",
+    "fecha": "2025-08-15",
+    "fecha_display": "Ago 2025",
+    "periodo": "Jun 2024 – 2025",
+    "monto": "S/2.5 millones (contrato 3 años); S/490,000 pagados sin funcionamiento, según El Comercio",
+    "instancia": "Contraloría General de la República",
+    "estado": "Observado por Contraloría; local sin funcionar durante más de un año, según El Comercio",
+    "resumen": "Según El Comercio, en junio de 2024 la Municipalidad habría suscrito un contrato de alquiler de un edificio en Miraflores por S/2.5 millones a tres años para instalar el policlínico SISOL número 50. De acuerdo con la misma fuente, hasta abril de 2025 se habrían pagado S/490,000 en alquiler sin que el local funcionara, ya que no se habría tramitado el cambio de zonificación (de residencial a local de salud) antes de contratar. Según El Comercio, en agosto de 2025 el edificio seguía cubierto con mallas y sin operar. La fuente señala un elemento adicional: la propietaria del edificio arrendado sería hermana del alcalde de La Victoria, quien figuraría como afiliado activo de Renovación Popular, el partido político de López Aliaga.",
+    "sancion": "Observado por Contraloría; local sin funcionar, según El Comercio",
+    "fuentes": [
+      {
+        "nombre": "El Comercio — SISOL gasta S/500 mil en local sin uso",
+        "url": "https://elcomercio.pe/lima/por-que-sisol-gasta-mas-de-s500-mil-en-un-local-sin-uso-en-miraflores/"
+      }
+    ]
   }
 ]
